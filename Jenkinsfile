@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/NinadDhuri/A-Dockerized-application-using-Jenkins-for-CI-CD.git'
+                // Update the branch name here to 'main' if it's your default branch
+                git branch: 'main', url: 'https://github.com/NinadDhuri/A-Dockerized-application-using-Jenkins-for-CI-CD.git'
             }
         }
         stage('Build Docker Image') {
