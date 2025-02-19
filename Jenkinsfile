@@ -9,13 +9,28 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t node-app .'
+                powershell '''
+                    # Build Docker image
+                    docker build -t node-app .
+                '''
             }
         }
         stage('Run Docker Container') {
             steps {
-                sh 'docker run -d -p 3000:3000 --name node-container node-app'
+                powershell '''
+                    # Run the Docker container
+                    docker run -d -p 3000:3000 --name node-container node-app
+                '''
             }
+        }
+    }
+    post {
+        always {
+            powershell '''
+                # Clean up Docker containers after the pipeline runs
+                docker ps -q --filter "ancestor=node-app" | ForEach-Object { docker stop $_ }
+                docker ps -aq --filter "ancestor=node-app" | ForEach-Object { docker rm $_ }
+            '''
         }
     }
 }
