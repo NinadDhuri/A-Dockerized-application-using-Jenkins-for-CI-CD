@@ -9,6 +9,14 @@
   "keywords": ["docker", "jenkins", "express"],
   "author": "Ninad Dhuri",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NinadDhuri/A-Dockerized-application-using-Jenkins-for-CI-CD.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NinadDhuri/A-Dockerized-application-using-Jenkins-for-CI-CD/issues"
+  },
+  "homepage": "https://github.com/NinadDhuri/A-Dockerized-application-using-Jenkins-for-CI-CD#readme",
   "type": "commonjs",
   "dependencies": {
     "express": "^4.21.2"
