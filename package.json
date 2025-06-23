@@ -1,14 +1,14 @@
 {
   "name": "docker-jenkins",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo Node.js app containerized with Docker and built via Jenkins pipeline",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["docker", "jenkins", "express"],
+  "author": "Ninad Dhuri",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "express": "^4.21.2"
